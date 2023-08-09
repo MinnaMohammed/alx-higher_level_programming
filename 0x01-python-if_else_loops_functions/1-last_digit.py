@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-number = -1024
 if number < 0:
     newNum = -number % 10
     number = -number

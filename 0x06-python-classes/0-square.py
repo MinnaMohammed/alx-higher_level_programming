@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''Define a square class'''
 class Square:
-    def __init__(self):
-        self.is_new = True
+'''Square'''
+    pass

@@ -4,7 +4,7 @@
 
 class LockedClass:
     """
-    from dynamically creating new instance attributes, except if 
+    from dynamically creating new instance attributes, except if
     the new instance attribute is called first_name
     """
 

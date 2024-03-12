@@ -6,6 +6,6 @@ for num in range(0, 100):
         zero = '0'
     else:
         zero = ''
-    print("{}{:s}{:d}".format(comma,zero,num), end="")
-    comma =", "
+    print("{}{:s}{:d}".format(comma, zero, num), end="")
+    comma = ", "
 print("{:s}".format('\n'))

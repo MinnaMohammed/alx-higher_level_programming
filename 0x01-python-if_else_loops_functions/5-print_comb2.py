@@ -8,4 +8,4 @@ for num in range(0, 100):
         zero = ''
     print("{}{:s}{:d}".format(comma, zero, num), end="")
     comma = ", "
-print("{:s}".format('\n'))
+print()

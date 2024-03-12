@@ -3,4 +3,4 @@ for char in range(97, 123):
     if char == 101 or char == 113:
         continue
     else:
-        print("%c" % char, end="")
+        print("{:c}".format(char), end="")

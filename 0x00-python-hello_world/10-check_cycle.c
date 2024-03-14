@@ -9,6 +9,9 @@
 */
 int check_cycle(listint_t *list)
 {
+	listint_t *current;
+	current = list;
+
 	if (list ==  NULL)
 		return (0);
 	else
@@ -19,6 +22,13 @@ int check_cycle(listint_t *list)
 		}
 		else
 		{
+			if (current-> next == list)
+				return (1);
+			else
+			{
+				return (0);
+
+			}
 			return (1);
 		}
 	}

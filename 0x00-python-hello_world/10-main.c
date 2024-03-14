@@ -17,11 +17,17 @@ int main(void)
 
     head = NULL;
     add_nodeint(&head, 0);
+    print_listint(head);
+    printf("--\n");
     add_nodeint(&head, 1);
+    print_listint(head);
+    printf("--\n");
     add_nodeint(&head, 2);
     add_nodeint(&head, 3);
     add_nodeint(&head, 4);
     add_nodeint(&head, 98);
+    print_listint(head);
+    printf("--\n");
     add_nodeint(&head, 402);
     add_nodeint(&head, 1024);
     print_listint(head);
@@ -46,8 +52,9 @@ int main(void)
     for (i = 0; i < 4; i++)
         current = current->next;
     current->next = temp;
+	print_listint(head);
 
-    free_listint(head);
+	free_listint(head);
 
     return (0);
 }

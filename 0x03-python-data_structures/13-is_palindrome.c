@@ -39,22 +39,30 @@ int is_palindrome(listint_t **head)
 			if (current != NULL)
 			{
 			if (first == half - 1)
-			{
-				if (current->n == current->next->n)
+			{ 
+
+				if ((n % 2 == 0 && current->n == current->next->n) || (n % 2 != 0 && current->n == current->next->next->n))
+				{
 					cond1 = 1;
+				}
 				else
 					return (0);
 			}
-			else if (cond1 == 1 && cond2 == 0)
+			else if (cond1 == 1 && cond2 == 0 && current->next == NULL)
 			{
 				if (last == half - 1)
 				{
 					if (current->n == (*head)->n)
 					{
 						cond2 = 1;
+						printf("first: %d head: %d\n", current->n, (*head)->n);
 					}
 					else
+					{
+						printf("last element: %d\n", current->n);
+						printf("hello\n");
 						return (0);
+					}
 
 				}
 				last++;

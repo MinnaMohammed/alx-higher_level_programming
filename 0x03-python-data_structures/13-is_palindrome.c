@@ -27,7 +27,7 @@ int is_palindrome(listint_t **head)
 	}
 	current = *head;
 	half = n / 2;
-	if (n % 2 == 0 || n == 1)
+	if (n % 2 == 0 || n == 1 || n % 2 != 0)
 	{
 		first = 0, last = 0;
 		while (current != NULL)

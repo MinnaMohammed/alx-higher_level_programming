@@ -67,7 +67,6 @@ int is_palindrome(listint_t **head)
 				current = *head;
 				first = 0;
 				last = n - 2;
-				printf("last: %d",last);
 				if (current == *head)
 				{
 					repeat = repeat->next;
@@ -77,14 +76,12 @@ int is_palindrome(listint_t **head)
 						current = current->next;
 						if (cnt >= last)
 						{
-							printf("current:%d , first:%d\n\n", current->n, repeat->n);
 							if (current->n == repeat->n)
 							{
 								current = *head;
 								repeat = repeat->next;
 								cnt = 0;
 								last--;
-								printf("last in loop:%d\n",last);
 							}
 							else
 								return (0);

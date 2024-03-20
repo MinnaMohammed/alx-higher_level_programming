@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
  * is_palindrome - checks if a singly linked list is a palindrome.
  *
@@ -25,8 +25,8 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		n++;
 	}
+	current = *head;
 	half = n / 2;
-
 	if (n % 2 == 0 || n == 1)
 	{
 		first = 0, last = 0;
@@ -43,8 +43,10 @@ int is_palindrome(listint_t **head)
 			{
 				if (last == half - 1)
 				{
-					if (current->next->n == (*head)->n)
+					if (current->n == (*head)->n)
+					{
 						cond2 = 1;
+					}
 					else
 						return (0);
 

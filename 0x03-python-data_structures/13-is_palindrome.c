@@ -14,12 +14,12 @@ int is_palindrome(listint_t **head)
 	int n, half, first, last; /* number of nodes */
 	int cond1 = 0, cond2 = 0, wait = 0, cnt = 0;
 
-	current = *head;
-	repeat = *head;
 
 	if (*head == NULL)
 		return (1);
-
+	
+	current = *head;
+	repeat = *head;
 	n = 0;
 	half = 0;
 	while (current != NULL)

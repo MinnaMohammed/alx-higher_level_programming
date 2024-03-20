@@ -24,7 +24,7 @@ int is_palindrome(listint_t **head)
 		n++;
 	}
 
-	if (n % 2 == 0)
+	if (n % 2 == 0 || n == 1)
 		return (1);
 	else
 		return (0);

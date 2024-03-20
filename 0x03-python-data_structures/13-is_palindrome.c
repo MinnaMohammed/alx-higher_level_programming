@@ -10,7 +10,8 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	unsigned int n; /* number of nodes */
+	unsigned int n, values; /* number of nodes */
+	int sum1 = 0, sum2 = 0;
 
 	current = *head;
 
@@ -25,7 +26,22 @@ int is_palindrome(listint_t **head)
 	}
 
 	if (n % 2 == 0 || n == 1)
-		return (1);
+	{
+		values = 0;
+		while (current != NULL)
+		{
+			if (values < (n / 2))
+				sum1 += current->n;
+			else
+				sum2 += current->n;
+			current = current->next;
+			values++;
+		}
+		if (sum1 == sum2)
+			return (1);
+		else
+			return (0);
+	}
 	else
 		return (0);
 	return (1);

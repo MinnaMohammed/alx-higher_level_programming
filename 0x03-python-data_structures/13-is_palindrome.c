@@ -29,7 +29,9 @@ int is_palindrome(listint_t **head)
 	}
 	current = *head;
 	half = n / 2;
-	if (n % 2 == 0 || n == 1 || n % 2 != 0)
+	if (n == 1)
+		return (1);
+	if (n % 2 == 0 || n % 2 != 0)
 	{
 		first = 0, last = 0;
 		while (true)
@@ -65,25 +67,30 @@ int is_palindrome(listint_t **head)
 				current = *head;
 				first = 0;
 				last = n - 2;
+				printf("last: %d",last);
 				if (current == *head)
 				{
 					repeat = repeat->next;
 					while(last != half)
 					{
-						current = current->next;
 						cnt++;
-						if (cnt > last)
+						current = current->next;
+						if (cnt >= last)
 						{
+							printf("current:%d , first:%d\n\n", current->n, repeat->n);
 							if (current->n == repeat->n)
 							{
+								current = *head;
 								repeat = repeat->next;
 								cnt = 0;
 								last--;
+								printf("last in loop:%d\n",last);
 							}
 							else
 								return (0);
 						}
 					}
+					return (1);
 
 				}
 			}

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Python Module'''
 
+
 class MyList(list):
     '''MyList class
 
@@ -10,5 +11,4 @@ class MyList(list):
 
     def print_sorted(self):
         '''A function that sorts a list'''
-        sorted_list = sorted(self)
-        return(sorted_list)
+        return(sorted(self))

@@ -20,6 +20,7 @@ Normal list test with append:
     >>> lst.append(3)
     >>> lst.print_sorted()
     [2, 3, 4, 4]
+
 Normal list test with append 2:
     >>> lst = MyList()
     >>> lst.append(3)

@@ -1,0 +1,30 @@
+Tests for the MyList class
+
+Import function from module:
+    >>> MyList = __import__('1-my_list').MyList
+
+Empty list test:
+    >>> lst = MyList()
+    >>> lst.print_sorted()
+    []
+
+Normal list test:
+    >>> lst = MyList([3, 2, 1])
+    >>> lst.print_sorted()
+    [1, 2, 3]
+
+Negative ints list test:
+    >>> lst = MyList([-1, -98, -23, 0, -23, -4])
+    >>> lst.print_sorted()
+    [-98, -23, -23, -4, -1, 0]
+
+List already in order:
+    >>> lst = MyList([-1, 0, 1, 2])
+    >>> lst.print_sorted()
+    [-1, 0, 1, 2]
+
+Test append:
+    >>> lst = MyList()
+    >>> lst.append(10)
+    >>> print(lst)
+    [10]

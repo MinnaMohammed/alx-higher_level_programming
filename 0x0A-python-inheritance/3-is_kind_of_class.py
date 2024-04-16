@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''is_kind_of_class module'''
+"""is_kind_of_class module"""
 
 
 def is_kind_of_class(obj, a_class):
-    '''checks if obj is an instance of, or if the obj is an instance
+    """checks if obj is an instance of, or if the obj is an instance
     of a class that inherited from, the specified class.
 
     Args:
@@ -12,5 +12,5 @@ def is_kind_of_class(obj, a_class):
 
     Returns:
         bool: True or False.
-    '''
-    return(isinstance(obj, a_class))
+    """
+    return isinstance(obj, a_class)

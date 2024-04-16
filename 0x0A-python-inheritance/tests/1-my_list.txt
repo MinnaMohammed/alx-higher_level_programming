@@ -12,6 +12,22 @@ Empty list test:
     >>> lst.print_sorted()
     []
 
+Normal list test with append:
+    >>> lst = MyList()
+    >>> lst.append(4)
+    >>> lst.append(4)
+    >>> lst.append(2)
+    >>> lst.append(3)
+    >>> lst.print_sorted()
+    [2, 3, 4, 4]
+Normal list test with append 2:
+    >>> lst = MyList()
+    >>> lst.append(3)
+    >>> lst.append(1)
+    >>> lst.append(2)
+    >>> lst.print_sorted()
+    [1, 2, 3]
+
 Normal list test:
     >>> lst = MyList([3, 2, 1])
     >>> lst.print_sorted()

@@ -9,6 +9,16 @@ class Square(Rectangle):
         ''' Square Class Constructor '''
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        ''' size attr getter '''
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        ''' size attr setter '''
+        self.__size = value
+
     def __str__(self):
         '''String representation of Square instance.'''
         return "[Square] ({}) {}/{} - {}".format(

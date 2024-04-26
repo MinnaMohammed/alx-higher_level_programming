@@ -79,7 +79,6 @@ class Rectangle(Base):
         for _ in range(self.height):
             print("#" * self.width)
 
-    @override
     def __str__(self):
         ''' String representation of Rectangle instance '''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(

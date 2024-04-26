@@ -20,6 +20,16 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        ''' A method that assigns attributes '''
+        if args:
+            attrs = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, attrs[i], args[i])
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def __str__(self):
         '''String representation of Square instance.'''
         return "[Square] ({}) {}/{} - {}".format(

@@ -29,7 +29,7 @@ class Base:
         if not json_string or len(json_string) == 0:
             return []
         else:
-            json.load(json_string)
+            json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):

@@ -26,7 +26,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         '''A method that returns the list of the JSON string representation'''
-        if not json_string or len(json_string) == 0:
+        if json_string is None or len(json_string) == 0:
             return []
         else:
             json.loads(json_string)

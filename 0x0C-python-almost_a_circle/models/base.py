@@ -18,7 +18,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         ''' A method that returns the JSON string representation of a dict '''
-        if list_dictionaries is not None or len(list_dictionaries) != 0:
-            return json.dumps(list_dictionaries)
-        else:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
+        else:
+            return json.dumps(list_dictionaries)

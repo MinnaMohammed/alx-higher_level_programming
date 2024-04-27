@@ -15,6 +15,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         ''' A method that returns the JSON string representation of a dict '''
         if list_dictionaries is not None or len(list_dictionaries) != 0:

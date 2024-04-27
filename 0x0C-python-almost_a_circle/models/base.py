@@ -26,10 +26,10 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         '''A method that returns the list of the JSON string representation'''
-        if not json_string:
+        if json_string is None or len(json_string) == 0:
             return []
         else:
-            json.loads(json_string)
+            return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):

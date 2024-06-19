@@ -4,5 +4,5 @@ const intVal = Number(str);
 if (isNaN(intVal)) {
   console.log('Not a number');
 } else {
-  console.log(parseInt(intVal));
+  console.log('My number: ' + parseInt(intVal));
 }
